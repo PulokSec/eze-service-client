@@ -1,0 +1,12 @@
+.testimonials{
+  background-color: #f1ddd7;
+  background-size: cover;
+}
+.testimonials .card{
+  border-color: transparent;
+}
+
+.testimonials .card .card-footer{
+  background: transparent;
+  border: 0;
+}

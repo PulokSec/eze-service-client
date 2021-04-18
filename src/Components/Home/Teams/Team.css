@@ -1,0 +1,23 @@
+.card-img{
+  border: 5px solid #6c63ff;
+  border-radius:50%;
+  width: 150px;
+  height: 150px;
+  transform: translateY(-50px);
+}
+.team{
+  background-image: url(../../images/creative_team_r90h.png);
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+}
+.team::before{
+  position: absolute;
+  content: "";
+  top:0;
+  width: 100%;
+  height: 100%;
+  background: #ffd7c1;
+  opacity: .9;
+  z-index: -1;
+}
