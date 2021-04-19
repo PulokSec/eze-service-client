@@ -10,13 +10,3 @@
   background: transparent;
   border: 0;
 }
-@media screen and (max-width: 668px) {
-  .card-footer img{
-    width: 30px;
-  height: 30px;
-  margin: 0;
-  }
-  .card-footer{
-    width: 100%;
-  }
-}

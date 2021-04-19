@@ -24,10 +24,3 @@
   opacity: .9;
   z-index: -1;
 }
-@media screen and (max-width: 668px) {
-  .card-img {
-    width: 50px;
-  height: 50px;
-  transform: translateY(-20px);
-  }
-}
