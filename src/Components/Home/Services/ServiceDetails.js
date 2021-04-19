@@ -12,7 +12,7 @@ const ServiceDetails = ({service,handleCart}) => {
       <img className="" src={service.imageURL} alt=""/>
       </div>
       <div className="buy-button">
-      <Link href="/payment" onClick={()=>{handleCart(service)}}><FontAwesomeIcon className="fa text-decoration-none" icon={faShoppingBag} />{service.price} $</Link>
+      <Link to="/payment" onClick={()=>{handleCart(service)}}><FontAwesomeIcon className="fa text-decoration-none" icon={faShoppingBag} />{service.price} $</Link>
       </div>
       <div className="details py-5">
       <h4 className="card-title text-center text-white text-uppercase">{service.title}</h4>
