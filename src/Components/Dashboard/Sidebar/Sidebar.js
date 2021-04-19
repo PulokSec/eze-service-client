@@ -25,7 +25,7 @@ const Sidebar = () => {
 
 
     return (
-        <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{ height: "100vh" }}>
+        <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4">
             <ul className="list-unstyled">
                     <li>
                         <Link to="/" className="text-white" >

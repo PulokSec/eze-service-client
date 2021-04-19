@@ -8,13 +8,14 @@ const Testimonial = (props) => {
         row.push(i);
     }
     return (
-        <div className="card shadow-sm">
+        <div className="card-deck mt-5 pl-3">
+                      <div className="card shadow-sm">
             <div className="card-body">
                 <p className="card-text text-center">{description}</p>
             </div>
             <div className="card-footer d-flex  align-items-center">
-                {image ? <img className="mx-3" src={image} width="60" alt="Profile Pic"/> :<img className="mx-3" src={img} width="60" alt="Profile Pic"/>  }
-                <div>
+                {image ? <img  src={image} width="60" alt="Profile Pic"/> :<img src={img} width="60" alt="Profile Pic"/>  }
+                <div className="pl-3">
                     <h6 className="text-primary">{name}</h6>
                     <p className="m-0">{post}</p>
                     <ul className="list-inline mt-2">
@@ -24,7 +25,8 @@ const Testimonial = (props) => {
                     </ul>
                 </div>
             </div>
-       </div>
+       </div>      
+        </div>
     );
 };
 

@@ -1,0 +1,147 @@
+.services-container{
+  background-image: url(../../images/password_d6kg.png);
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+}
+.services-container::before{
+  position: absolute;
+  content: "";
+  top:0;
+  width: 100%;
+  height: 100%;
+  background: #c0c0f7;
+  opacity: .8;
+  z-index: -1;
+}
+.card-wrapper{
+  position: relative;
+  width: 100%;
+  padding:10px;
+  box-sizing: border-box;
+  &:active,&:hover,&focus{
+    outline: none;
+    border: none;
+  }
+}
+
+.card-design{
+  background-image:linear-gradient(40deg, #ff9c63,#6c63ff);
+  overflow: hidden;
+  width: 100%;
+  height: 450px;
+  border-radius: 16px;
+  cursor: pointer;
+  position: relative;
+  .card-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: 3s;
+    background-image:linear-gradient(40deg, #ff9c63,#6c63ff);
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &:hover{
+    img{
+      opacity: .4;
+      transition: .5s;
+    }
+    .card-image{
+      transform:translateX(-550px);
+      transition: all .9s;
+    }
+  }
+}
+
+.buy-button{
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 3;
+     a{
+        position: relative;
+        display: block;
+        width: 150px;
+        height: 100px;
+        // line-height: 23px;
+        text-align: center;
+        background-color:transparent;
+        // font-size: 23px;
+        // font-weight: bold;
+        transition: .4s;
+        transform: translateX(200px);
+        opacity: 0;
+  }
+}
+
+.card:hover{
+  .buy-button a{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+}
+.buy-button a .fa{
+  transition: .8s;
+  width: 150px;
+  height: 100px;
+  color:#000;
+  &:hover{
+    transform: rotateY(360deg);
+    color: #fff;
+  }
+}
+.details{
+  position: absolute;
+  left: 0;
+  background: transparent;
+  width: 100%;
+  height:100%;
+  z-index: 1;
+  transition: .6s;
+
+}
+.carousel{
+  .slick-dots{
+    li{
+      button{
+        width: 20px;
+        height:20px;
+        border: 1px solid #6c63ff;
+        border-radius: 20px;
+      }
+      &.slick-active,
+    &:hover{
+      button{
+        border-color: #ff9c63;
+      }
+    }
+    }
+    
+  }
+.slick-prev, .slick-next{
+    border-color:#6c63ff;
+  }
+}
+@media screen and (max-width: 668px) {
+  .card-design {
+    width: 100%;
+    padding: auto;
+
+  }
+  .buy-button a .fa{
+    width: 130px;
+    height: 30px;
+  }
+  .details h4{
+    font-size: smaller;
+  }
+}

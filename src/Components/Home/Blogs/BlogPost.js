@@ -5,7 +5,7 @@ const BlogPost = (props) => {
         <div className="card shadow-sm mt-3">
             <div className="card-header d-flex  align-items-center">
                 <div>
-                <h6 className="text-styleB">{author}<br/><soan className="text-styleA">{date}</soan></h6>
+                <h6 className="text-styleB">{author}<br/><span className="text-styleA">{date}</span></h6>
                 </div>
                 <div className="card-body">
                 <h5>{title}</h5>

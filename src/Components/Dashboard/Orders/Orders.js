@@ -23,6 +23,8 @@ const Orders = () => {
                       <th className="text-secondary text-left" scope="col">Sr No</th>
                       <th className="text-secondary" scope="col">Name</th>
                       <th className="text-secondary" scope="col">Services</th>                      
+                      <th className="text-secondary" scope="col">Order Date</th>                      
+                      <th className="text-secondary" scope="col">Paid</th>                      
                       <th className="text-secondary" scope="col">Status</th>
                       </tr>
                   </thead>
@@ -34,6 +36,8 @@ const Orders = () => {
                               <td>{index + 1}</td>
                               <td>{order.name}</td>
                               <td>{order.title}</td>
+                              <td>{order.date}</td>
+                              <td>{order.price}$</td>
                               <td className="text-uppercase fw-bolder" id={order.status}>{order.status}</td>
                           </tr>
                           

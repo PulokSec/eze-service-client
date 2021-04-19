@@ -61,6 +61,14 @@ const AddService = () => {
             <Sidebar></Sidebar>
             <div className="col-md-10 p-4 pr-5" style={{ position: "absolute", right: 0, backgroundColor: "#f0f0ff" }}>
                 <h5 className="text-styleA">Add a Service</h5>
+                {alert && 
+        <div className={classes.root}>
+        <Alert severity="success">
+        <AlertTitle>Success</AlertTitle>
+        File Updated — <strong>check it out!</strong>
+      </Alert>
+        </div>
+        }
 
       <form className="form my-2 mr-5" onSubmit={handleSubmit(onSubmit)}>
        <div className="mb-3 form-group">
@@ -90,14 +98,6 @@ const AddService = () => {
         <input type="submit" value="Submit" className="btn button text-white"/>
          </div>
         </form>
-        {alert && 
-        <div className={classes.root}>
-        <Alert severity="success">
-        <AlertTitle>Success</AlertTitle>
-        File Updated — <strong>check it out!</strong>
-      </Alert>
-        </div>
-        }
             </div>
         </section>
     );

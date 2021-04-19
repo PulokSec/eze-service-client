@@ -1,44 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { Alert, AlertTitle } from '@material-ui/lab';
-import { makeStyles } from '@material-ui/core';
+import React from 'react';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-      width: '100%',
-      '& > * + *': {
-        marginTop: theme.spacing(2),
-      },
-    },
-  }));
 
-const OrderList = () => {
-    const [orders, setOrders] = useState([]);
-    const [alert,setAlert] = useState(false);
-    const classes = useStyles();
-    useEffect(() => {
-        fetch('https://protected-fjord-22180.herokuapp.com/allOrders')
-            .then(res => res.json())
-            .then(data => setOrders(data))
-    }, [])
+const OrderList = ({selectedStatus , orders}) => {
 
-    const selectedStatus = (e,id) => {
-        const status = e.target.value;
-        const updateStatus = {id, status};
-        console.log(updateStatus);
-
-        fetch(`https://protected-fjord-22180.herokuapp.com/update/${id}`,{
-            method: 'PATCH',
-            headers: { 'Content-Type': 'application/json'},
-            body: JSON.stringify(updateStatus)
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if(data){
-                setAlert(true)
-            }
-        })
-    }
 
     return (
         <table className="table table-borderless">
@@ -48,7 +12,8 @@ const OrderList = () => {
                 <th className="text-secondary" scope="col">Name</th>
                 <th className="text-secondary" scope="col">Email ID</th>
                 <th className="text-secondary" scope="col">Services</th>
-                <th className="text-secondary" scope="col">Payment Method</th>
+                <th className="text-secondary" scope="col">Method</th>
+                <th className="text-secondary" scope="col">Order Date</th>
                 <th className="text-secondary" scope="col">Paid</th>
                 <th className="text-secondary" scope="col">Status</th>
                 </tr>
@@ -62,6 +27,7 @@ const OrderList = () => {
                         <td>{order.email}</td>
                         <td>{order.title}</td>
                         <td>{order.type}</td>
+                        <td>{order.date}</td>
                         <td>{order.price} $</td>
                         <td><select id={order.status} className="text-uppercase fw-bolder" onChange={(e) => selectedStatus(e,`${order._id}`)} name={order.status}>
           <option value={order.status}>{order.status}</option>
@@ -73,14 +39,6 @@ const OrderList = () => {
                     )
                 }
             </tbody>
-            {alert && 
-        <div className={classes.root}>
-        <Alert severity="success">
-        <AlertTitle>Success</AlertTitle>
-        Updated — <strong>check it out!</strong>
-      </Alert>
-        </div>
-        }
         </table>
     );
 };
