@@ -37,7 +37,7 @@ const Testimonials = () => {
       }
 
         useEffect(() => {
-            fetch('https://protected-fjord-22180.herokuapp.com/allReviews')
+            fetch('https://mk-manager.onrender.com/allReviews')
                 .then(res => res.json())
                 .then(data => setReviews(data))
         }, [])

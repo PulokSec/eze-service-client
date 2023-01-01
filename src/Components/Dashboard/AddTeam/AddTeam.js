@@ -43,7 +43,7 @@ const AddTeam = () => {
         }
 
 
-        fetch('https://protected-fjord-22180.herokuapp.com/addTeam', {
+        fetch('https://mk-manager.onrender.com/addTeam', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

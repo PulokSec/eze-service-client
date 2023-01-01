@@ -18,7 +18,7 @@ const AllOrders = () => {
   const classes = useStyles();
 
   useEffect(() => {
-      fetch('https://protected-fjord-22180.herokuapp.com/allOrders')
+      fetch('https://mk-manager.onrender.com/allOrders')
           .then(res => res.json())
           .then(data => setOrders(data))
   }, [])
@@ -27,7 +27,7 @@ const AllOrders = () => {
       const status = e.target.value;
       const updateStatus = {id, status};
 
-      fetch(`https://protected-fjord-22180.herokuapp.com/update/${id}`,{
+      fetch(`https://mk-manager.onrender.com/update/${id}`,{
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json'},
           body: JSON.stringify(updateStatus)

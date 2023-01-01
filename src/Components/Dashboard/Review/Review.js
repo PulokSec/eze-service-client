@@ -30,7 +30,7 @@ const Review = () => {
     }
 
 
-    fetch('https://protected-fjord-22180.herokuapp.com/addReview', {
+    fetch('https://mk-manager.onrender.com/addReview', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

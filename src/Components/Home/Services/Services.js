@@ -12,7 +12,7 @@ const Services = () => {
     setCart(cart)
   }
   useEffect(()=>{
-    fetch('https://protected-fjord-22180.herokuapp.com/services')
+    fetch('https://mk-manager.onrender.com/services')
     .then(res => res.json())
     .then(data =>{
       setServiceData(data);

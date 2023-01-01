@@ -44,7 +44,7 @@ const AddService = () => {
         }
 
 
-        fetch('https://protected-fjord-22180.herokuapp.com/addService', {
+        fetch('https://mk-manager.onrender.com/addService', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

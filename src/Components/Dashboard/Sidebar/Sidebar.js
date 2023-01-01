@@ -14,7 +14,7 @@ const Sidebar = () => {
     }
 
     useEffect(() => {
-        fetch('https://protected-fjord-22180.herokuapp.com/isAdmin?email='+loggedInUser.email)
+        fetch('https://mk-manager.onrender.com/isAdmin?email='+loggedInUser.email)
             .then(res => res.json())
             .then(data => {
                 if(data){

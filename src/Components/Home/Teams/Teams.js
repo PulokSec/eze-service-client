@@ -37,7 +37,7 @@ const Teams = () => {
       }
 
     useEffect(()=>{
-        fetch('https://protected-fjord-22180.herokuapp.com/teams')
+        fetch('https://mk-manager.onrender.com/teams')
         .then(res => res.json())
         .then(data =>{
           setTeams(data);

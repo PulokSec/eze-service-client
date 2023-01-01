@@ -25,7 +25,7 @@ const AddAdmin = () => {
 
         }
 
-        fetch('https://protected-fjord-22180.herokuapp.com/addAdmin', {
+        fetch('https://mk-manager.onrender.com/addAdmin', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
