@@ -1,6 +1,6 @@
 Site Name: EZE Service
 Live Site: https://eze-service.web.app/
-Server Link: https://github.com/Porgramming-Hero-web-course/complete-website-server-PulokSec
+Server Link: https://github.com/PulokSec/eze-service-server
 
 Features :
 1.All kind of music production,hosting,advertising,archiving services
