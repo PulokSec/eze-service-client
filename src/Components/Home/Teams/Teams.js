@@ -37,7 +37,7 @@ const Teams = () => {
       }
 
     useEffect(()=>{
-        fetch('https://mk-manager.onrender.com/teams')
+        fetch('https://pomato-server.onrender.com/teams')
         .then(res => res.json())
         .then(data =>{
           setTeams(data);

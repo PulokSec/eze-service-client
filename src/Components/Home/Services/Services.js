@@ -12,7 +12,7 @@ const Services = () => {
     setCart(cart)
   }
   useEffect(()=>{
-    fetch('https://mk-manager.onrender.com/services')
+    fetch('https://pomato-server.onrender.com/services')
     .then(res => res.json())
     .then(data =>{
       setServiceData(data);

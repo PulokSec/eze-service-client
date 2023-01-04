@@ -7,7 +7,7 @@ const Orders = () => {
     const {loggedInUser} = useContext(UserContext);
 
     useEffect(() => {
-        fetch('https://mk-manager.onrender.com/orders?email='+loggedInUser.email)
+        fetch('https://pomato-server.onrender.com/orders?email='+loggedInUser.email)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [loggedInUser.email])

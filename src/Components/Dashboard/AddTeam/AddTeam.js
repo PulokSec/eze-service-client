@@ -43,7 +43,7 @@ const AddTeam = () => {
         }
 
 
-        fetch('https://mk-manager.onrender.com/addTeam', {
+        fetch('https://pomato-server.onrender.com/addTeam', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

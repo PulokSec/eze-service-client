@@ -14,7 +14,7 @@ const Sidebar = () => {
     }
 
     useEffect(() => {
-        fetch('https://mk-manager.onrender.com/isAdmin?email='+loggedInUser.email)
+        fetch('https://pomato-server.onrender.com/isAdmin?email='+loggedInUser.email)
             .then(res => res.json())
             .then(data => {
                 if(data){

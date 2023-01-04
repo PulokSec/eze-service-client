@@ -18,7 +18,7 @@ const AllOrders = () => {
   const classes = useStyles();
 
   useEffect(() => {
-      fetch('https://mk-manager.onrender.com/allOrders')
+      fetch('https://pomato-server.onrender.com/allOrders')
           .then(res => res.json())
           .then(data => setOrders(data))
   }, [])
@@ -27,7 +27,7 @@ const AllOrders = () => {
       const status = e.target.value;
       const updateStatus = {id, status};
 
-      fetch(`https://mk-manager.onrender.com/update/${id}`,{
+      fetch(`https://pomato-server.onrender.com/update/${id}`,{
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json'},
           body: JSON.stringify(updateStatus)

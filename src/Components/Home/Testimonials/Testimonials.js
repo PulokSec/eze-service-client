@@ -37,7 +37,7 @@ const Testimonials = () => {
       }
 
         useEffect(() => {
-            fetch('https://mk-manager.onrender.com/allReviews')
+            fetch('https://pomato-server.onrender.com/allReviews')
                 .then(res => res.json())
                 .then(data => setReviews(data))
         }, [])

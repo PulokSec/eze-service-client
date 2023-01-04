@@ -19,7 +19,7 @@ const ManageService = () => {
     const classes = useStyles();
 
     useEffect(() => {
-        fetch('https://mk-manager.onrender.com/services')
+        fetch('https://pomato-server.onrender.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
@@ -27,7 +27,7 @@ const ManageService = () => {
     const deleteService= (id)=>{
         const row = document.getElementById(id);
         
-        fetch(`https://mk-manager.onrender.com/deleteService/${id}`,{
+        fetch(`https://pomato-server.onrender.com/deleteService/${id}`,{
           method: 'DELETE'
         })
         .then(res => res.json())

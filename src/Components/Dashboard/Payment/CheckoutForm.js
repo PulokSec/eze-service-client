@@ -160,7 +160,7 @@ const CheckoutForm = () => {
     newOrder.status = "pending";
     console.log(newOrder);
 
-    fetch('https://mk-manager.onrender.com/addOrder',{
+    fetch('https://pomato-server.onrender.com/addOrder',{
       method: 'POST',
       headers: { 'Content-Type': 'application/json'},
       body: JSON.stringify(newOrder)

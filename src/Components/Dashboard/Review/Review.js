@@ -30,7 +30,7 @@ const Review = () => {
     }
 
 
-    fetch('https://mk-manager.onrender.com/addReview', {
+    fetch('https://pomato-server.onrender.com/addReview', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

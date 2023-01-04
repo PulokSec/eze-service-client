@@ -25,7 +25,7 @@ const AddAdmin = () => {
 
         }
 
-        fetch('https://mk-manager.onrender.com/addAdmin', {
+        fetch('https://pomato-server.onrender.com/addAdmin', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
