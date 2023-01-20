@@ -54,7 +54,7 @@ const Services = () => {
       </div>
       <Slider {...settings}>
       {
-          serviceData.map( service => <ServiceDetails handleCart={handleCart} service={service}/>)
+          serviceData.map( (service,idx) => <ServiceDetails key={idx} handleCart={handleCart} service={service}/>)
         }
       </Slider>
       </div>
